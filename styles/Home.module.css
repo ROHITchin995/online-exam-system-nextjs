@@ -1,3 +1,6 @@
+.wrapper{
+  min-height: 100vh;
+}
 .nav{
   background-color: rgb(44, 44, 206);
   height: 2rem;
@@ -15,4 +18,21 @@
   padding: 2px;
   text-align: center;
   color: white;
+}
+.maincontainer{
+  height: 100%;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+.commonButton{
+  background-color: rgb(103, 130, 248);
+  color: white;
+  border-radius: 5%;
+  border: rgb(103, 130, 248);
+  padding: 5px;
+  margin: 2px;
+}
+.commonButton:hover{
+  background-color: darkblue;
+  cursor: pointer;
 }

@@ -14,18 +14,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={styles.wrapper}>
       <nav className={styles.nav}>
         <span className={styles.navtext}>
         DEMO ONLINE TEST
         </span>
       </nav>
-      <div className='main-container'>
+      <div className={styles.maincontainer}>
         <div className='question-section'>
           <div className="sections-button">
-            <button>All sections</button>
-            <button>PHYSICS</button>
-            <button>CHEMISTRY</button>
-            <button>MATHS</button>
+            <button className={styles.commonButton}>All sections</button>
+            <button className={styles.commonButton}>PHYSICS</button>
+            <button className={styles.commonButton}>CHEMISTRY</button>
+            <button className={styles.commonButton}>MATHS</button>
           </div>
           <div className='question-container'>
             <div className='question-container-top'>
@@ -56,11 +57,11 @@ export default function Home() {
             </div>
           </div>
           <div className="question-buttons">
-          <button>CLEAR RESPONSE</button>
-            <button>REVIEW</button>
-            <button>DUMP</button>
-            <button>PREVIOUS</button>
-            <button>NEXT</button>
+          <button className={styles.commonButton}>CLEAR RESPONSE</button>
+            <button className={styles.commonButton}>REVIEW</button>
+            <button className={styles.commonButton}>DUMP</button>
+            <button className={styles.commonButton}>PREVIOUS</button>
+            <button className={styles.commonButton}>NEXT</button>
           </div>
         </div>
 
@@ -89,10 +90,10 @@ export default function Home() {
               <div>All Questions</div>
             </div>
             <div className="legend-bottom">
-            <button>Profile</button>
-            <button>Instr</button>
-            <button>Questions</button>
-            <button>Submit</button>
+            <button className={styles.commonButton}>Profile</button>
+            <button className={styles.commonButton}>Instr</button>
+            <button className={styles.commonButton}>Questions</button>
+            <button className={styles.commonButton}>Submit</button>
             </div>
           </div>
         </div>
@@ -102,6 +103,7 @@ export default function Home() {
       <footer className={styles.footer}>
           Addmen
       </footer>
+      </div>
     </>
   )
 }
