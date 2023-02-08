@@ -1,6 +1,5 @@
 .nav{
   background-color: rgb(44, 44, 206);
-  
   height: 2rem;
   display: flex;
   flex-wrap: wrap;
@@ -9,5 +8,11 @@
 }
 .navtext{
   font-weight: bold;
+  color: white;
+}
+.footer{
+  background-color: grey;
+  padding: 2px;
+  text-align: center;
   color: white;
 }

@@ -99,8 +99,8 @@ export default function Home() {
 
       </div>
 
-      <footer>
-        Addmen
+      <footer className={styles.footer}>
+          Addmen
       </footer>
     </>
   )
