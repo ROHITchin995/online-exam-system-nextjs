@@ -14,110 +14,94 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <nav>
+        <div className="nav-text">
+        DEMO ONLINE TEST
+        </div>
+      </nav>
+      <div className='main-container'>
+        <div className='question-section'>
+          <div className="sections-button">
+            <button>All sections</button>
+            <button>PHYSICS</button>
+            <button>CHEMISTRY</button>
+            <button>MATHS</button>
+          </div>
+          <div className='question-container'>
+            <div className='question-container-top'>
+              Q No.1
+              View in
+              <select name="question-language" id="question-language">
+                <option value="volvo">English</option>
+                <option value="saab">Hindi</option>
+              </select>
+            </div>
+            <div className='top-line'>
+              QUESTION INSTRUCTION
+              QUESTION
+            </div>
+            <div className="quesition-main-data">
+              <div className='question-instruction'>Here comes all instruction</div>
+              <div className='question-with-options'>
+                Here comes question...
+                <input type="radio" id="optionA" name="question-options" />
+                <label for="optionA"> (A). </label>
+                <input type="radio" id="optionB" name="question-options" />
+                <label for="optionB"> (B). </label>
+                <input type="radio" id="optionC" name="question-options" />
+                <label for="optionC"> (C). </label>
+                <input type="radio" id="optionD" name="question-options" />
+                <label for="optionD"> (D). </label>
+              </div>
+            </div>
+          </div>
+          <div className="question-buttons">
+          <button>CLEAR RESPONSE</button>
+            <button>REVIEW</button>
+            <button>DUMP</button>
+            <button>PREVIOUS</button>
+            <button>NEXT</button>
           </div>
         </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+        <div className='question-status'>
+          <div className="candidate-container">
+            <div className="candidate-image">
+              candidate image here... 
+            </div>
+              Time and Name
+          </div>
+          <div className="questions-pallete">
+            <div className="pallete-top">Question Pallete</div>
+            <div className='pallete-buttons'>
+
+            </div>
+          </div>
+          <div className='legend-container'>
+            <div className="legend-top">Legend (Click to View)</div>
+            <div className="legend-info">
+              <div>Answer</div>
+              <div>No Answer</div>
+              <div>Review Answer</div>
+              <div>Review Answer</div>
+              <div>Dump</div>
+              <div>No Visit</div>
+              <div>All Questions</div>
+            </div>
+            <div className="legend-bottom">
+            <button>Profile</button>
+            <button>Instr</button>
+            <button>Questions</button>
+            <button>Submit</button>
+            </div>
           </div>
         </div>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
+      </div>
 
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+      <footer>
+        Addmen
+      </footer>
     </>
   )
 }
