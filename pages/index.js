@@ -14,10 +14,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav>
-        <div className="nav-text">
+      <nav className={styles.nav}>
+        <span className={styles.navtext}>
         DEMO ONLINE TEST
-        </div>
+        </span>
       </nav>
       <div className='main-container'>
         <div className='question-section'>
