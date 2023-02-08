@@ -22,7 +22,7 @@
 .maincontainer{
   height: 100%;
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 3fr 1fr;
 }
 .commonButton{
   background-color: rgb(103, 130, 248);
@@ -30,9 +30,29 @@
   border-radius: 5%;
   border: rgb(103, 130, 248);
   padding: 5px;
-  margin: 2px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
 }
 .commonButton:hover{
   background-color: darkblue;
   cursor: pointer;
+  
+}
+.questionContainer{
+  box-shadow: var(--lightShadow);
+  height: 80vh;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+.commonBoxShadow{
+  box-shadow: var(--lightShadow);
+  border-radius: 5px;
+}
+.questionStatus{
+  margin-left: 15px;
+}
+.questionMainData{
+  display: flex;
 }

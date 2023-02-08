@@ -28,7 +28,7 @@ export default function Home() {
             <button className={styles.commonButton}>CHEMISTRY</button>
             <button className={styles.commonButton}>MATHS</button>
           </div>
-          <div className='question-container'>
+          <div className={styles.questionContainer}>
             <div className='question-container-top'>
               Q No.1
               View in
@@ -41,7 +41,7 @@ export default function Home() {
               QUESTION INSTRUCTION
               QUESTION
             </div>
-            <div className="quesition-main-data">
+            <div className={styles.questionMainData}>
               <div className='question-instruction'>Here comes all instruction</div>
               <div className='question-with-options'>
                 Here comes question...
@@ -65,20 +65,20 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='question-status'>
-          <div className="candidate-container">
+        <div className={styles.questionStatus}>
+          <div className={styles.commonBoxShadow}>
             <div className="candidate-image">
               candidate image here... 
             </div>
               Time and Name
           </div>
-          <div className="questions-pallete">
+          <div className={styles.commonBoxShadow}>
             <div className="pallete-top">Question Pallete</div>
             <div className='pallete-buttons'>
 
             </div>
           </div>
-          <div className='legend-container'>
+          <div className={styles.commonBoxShadow}>
             <div className="legend-top">Legend (Click to View)</div>
             <div className="legend-info">
               <div>Answer</div>
