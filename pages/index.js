@@ -24,10 +24,11 @@ export default function Home() {
       <div className={styles.maincontainer}>
         <div className='question-section'>
           <div className="sections-button">
-            <button className={styles.commonButton}>{section[0]}</button>
-            <button className={styles.commonButton}>PHYSICS</button>
-            <button className={styles.commonButton}>CHEMISTRY</button>
-            <button className={styles.commonButton}>MATHS</button>
+            {
+              section.map((sections)=>(
+                <button className={styles.commonButton}>{sections}</button>
+              ))
+            }
           </div>
           <div className={styles.questionContainer}>
             <div className={styles.questionContainerTop}>
