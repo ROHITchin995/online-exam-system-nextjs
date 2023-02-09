@@ -95,8 +95,12 @@ export default function Home() {
             </div>
             <div className={`${styles.commonBoxShadow} ${styles.lightBlueBackground} ${styles.questionPallete}`}>
               <div className={styles.PalleteTop}>Question Pallete</div>
-              <div className='pallete-buttons'>
-
+              <div className={styles.palleteButtonsOuter}>
+                  <div className={styles.palleteButton}>1</div>
+                  <div className={styles.palleteButton}>2</div>
+                  <div className={styles.palleteButton}>3</div>
+                  <div className={styles.palleteButton}>4</div>
+                  <div className={styles.palleteButton}>5</div>
               </div>
             </div>
             <div className={`${styles.commonBoxShadow} ${styles.lightBlueBackground} ${styles.legendOuter}`}>
@@ -123,7 +127,7 @@ export default function Home() {
         </div>
 
         <footer className={styles.footer}>
-          Addmen
+        &#169; Addmen
         </footer>
       </div>
     </>

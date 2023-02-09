@@ -26,10 +26,10 @@
   display: grid;
   grid-template-columns: 4fr 1fr;
   margin-left: 5px;
-  margin-right: 1px;
+  margin-right: 3px;
 }
 .commonButton{
-  width: 10rem;
+  width: 9rem;
   background-color: rgb(103, 130, 248);
   color: white;
   border-radius: 4%;
@@ -84,13 +84,14 @@
   box-shadow: .5px .5px 0px 0px rgba(0,0,0,0.2);
   padding: 2px;
 }
+
 .questionDesc{
-  height: 100px;
+  height: 150px;
   padding: 10px;
   box-shadow: 0px .5px 0px 0px rgba(0,0,0,0.2);
 }
 .inputOuter{
-  height: 70px;
+  height: 60px;
   padding: 10px;
   box-shadow: 0px .5px 0px 0px rgba(0,0,0,0.2); 
 }
@@ -101,9 +102,8 @@
   outline: none;
 }
 .questionPallete{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .candidateImage{
   border: 1px solid black;
@@ -172,5 +172,14 @@
   border: rgb(103, 130, 248);
   margin: 2px;
   height: 25px;
+  cursor: pointer;
+}
+.palleteButtonsOuter{
+  display: flex;
+}
+.palleteButton{
+  flex: 20%;
+  text-align: center;
+  border: 1px solid grey;
   cursor: pointer;
 }
