@@ -1,5 +1,6 @@
 .wrapper{
   min-height: 100vh;
+  max-height: 100vh;
 }
 .nav{
   background-color: rgb(44, 44, 206);
@@ -18,16 +19,20 @@
   padding: 2px;
   text-align: center;
   color: white;
+  margin-top: 7px;
 }
 .maincontainer{
   height: 100%;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 4fr 1fr;
+  margin-left: 5px;
+  margin-right: 1px;
 }
 .commonButton{
+  width: 10rem;
   background-color: rgb(103, 130, 248);
   color: white;
-  border-radius: 5%;
+  border-radius: 4%;
   border: rgb(103, 130, 248);
   padding: 5px;
   text-align: center;
@@ -45,6 +50,8 @@
   height: 80vh;
   border-radius: 5px;
   margin-left: 5px;
+  display: grid;
+  grid-template-rows: .1fr .1fr;
 }
 .commonBoxShadow{
   box-shadow: var(--lightShadow);
@@ -52,7 +59,118 @@
 }
 .questionStatus{
   margin-left: 15px;
+  display: grid;
+  grid-template-rows: 0fr 1fr .7fr;
+  padding: 2px;
 }
 .questionMainData{
   display: flex;
+}
+.questionContainerTop{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(103, 130, 248);
+  color: white;
+  padding: 5px;
+}
+.topLine{
+  color: blue;
+  display: flex;
+  font-weight: bold;
+}
+.topLine span, .questionInstruction, .questionWithOptions{
+  
+  flex: 50%;
+  box-shadow: .5px .5px 0px 0px rgba(0,0,0,0.2);
+  padding: 2px;
+}
+.questionDesc{
+  height: 100px;
+  padding: 10px;
+  box-shadow: 0px .5px 0px 0px rgba(0,0,0,0.2);
+}
+.inputOuter{
+  height: 70px;
+  padding: 10px;
+  box-shadow: 0px .5px 0px 0px rgba(0,0,0,0.2); 
+}
+.lightBlueBackground{
+  background-color: lightblue;
+}
+.selectMenu{
+  outline: none;
+}
+.questionPallete{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+.candidateImage{
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+  margin: 4px;
+}
+.imageAndTime{
+  display: flex;
+  padding: 3px;
+}
+.PalleteTop, .legendTop{
+  background-color: rgb(103, 130, 248);
+  color: white;
+  padding: 3px;
+}
+.legendOuter{
+  display: grid;
+  grid-template-rows: 0fr .3fr 0fr 0fr;
+}
+.legendInfo{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.legendAnswer{
+  background-color: rgb(62, 253, 62);
+}
+.legendNoAnswer{
+  background-color: rgb(250, 117, 41);
+}
+.legendPlusAnswer{
+  background-color: rgb(148, 141, 235);
+}
+.legendMinusAnswer{
+  background-color: rgb(219, 228, 95);
+}
+.legendDump{
+  background-color: rgb(151, 151, 148);
+}
+.legendNoVisit{
+  background-color: rgb(233, 233, 232);
+}
+
+.legendAnswer, .legendNoAnswer, .legendPlusAnswer, .legendMinusAnswer, .legendDump, .legendNoVisit{
+  color: black;
+  padding: 4px;
+  margin: 1px;
+  cursor: pointer;
+}
+.AllQuestions{
+  margin-top: 1px;  
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: rgb(103, 130, 248);
+}
+.legendBottom{
+  border-top: 1px solid white;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 5px;
+}
+.legendButton{
+  background-color: rgb(103, 130, 248);
+  color: white;
+  border-radius: 4%;
+  border: rgb(103, 130, 248);
+  margin: 2px;
+  height: 25px;
+  cursor: pointer;
 }

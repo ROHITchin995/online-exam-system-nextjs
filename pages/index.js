@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import { useState } from 'react'
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export default function Home() {
+  const [section, setSection] = useState(['All sections', 'PHYSICS', 'CHEMISTRY', 'MATHS'])
   return (
     <>
       <Head>
@@ -23,36 +24,51 @@ export default function Home() {
       <div className={styles.maincontainer}>
         <div className='question-section'>
           <div className="sections-button">
-            <button className={styles.commonButton}>All sections</button>
+            <button className={styles.commonButton}>{section[0]}</button>
             <button className={styles.commonButton}>PHYSICS</button>
             <button className={styles.commonButton}>CHEMISTRY</button>
             <button className={styles.commonButton}>MATHS</button>
           </div>
           <div className={styles.questionContainer}>
-            <div className='question-container-top'>
-              Q No.1
-              View in
-              <select name="question-language" id="question-language">
-                <option value="volvo">English</option>
-                <option value="saab">Hindi</option>
-              </select>
+            <div className={styles.questionContainerTop}>
+              <span>Q No.:1</span> 
+              <span>View in
+              <select className={styles.selectMenu} name="question-language" id="question-language">
+                <option className={styles.selectMenu} value="volvo">English</option>
+                <option className={styles.selectMenu} value="saab">Hindi</option>
+              </select></span>
+              
             </div>
-            <div className='top-line'>
-              QUESTION INSTRUCTION
-              QUESTION
+            <div className={styles.topLine}>
+              <span>QUESTION INSTRUCTION</span>
+              <span>QUESTION</span>
             </div>
+            
             <div className={styles.questionMainData}>
-              <div className='question-instruction'>Here comes all instruction</div>
-              <div className='question-with-options'>
-                Here comes question...
+              <div className={styles.questionInstruction}>Here comes all instruction</div>
+              <div className={styles.questionWithOptions}>
+                <div className={styles.questionDesc}>Here comes question...</div>
+                
+                <div className={styles.inputOuter}>
                 <input type="radio" id="optionA" name="question-options" />
                 <label for="optionA"> (A). </label>
+                </div>
+                  
+                <div className={styles.inputOuter}>
                 <input type="radio" id="optionB" name="question-options" />
                 <label for="optionB"> (B). </label>
+                </div>
+                
+                <div className={styles.inputOuter}>
                 <input type="radio" id="optionC" name="question-options" />
                 <label for="optionC"> (C). </label>
+                </div>
+                
+                <div className={styles.inputOuter}>
                 <input type="radio" id="optionD" name="question-options" />
                 <label for="optionD"> (D). </label>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -66,34 +82,38 @@ export default function Home() {
         </div>
 
         <div className={styles.questionStatus}>
-          <div className={styles.commonBoxShadow}>
-            <div className="candidate-image">
+          <div className={`${styles.commonBoxShadow} ${styles.lightBlueBackground}`}>
+            <div className={styles.imageAndTime}>
+            <div className={styles.candidateImage}>
               candidate image here... 
             </div>
-              Time and Name
+              Time Left: <br />
+              Name
+            </div>
+            
           </div>
-          <div className={styles.commonBoxShadow}>
-            <div className="pallete-top">Question Pallete</div>
+          <div className={`${styles.commonBoxShadow} ${styles.lightBlueBackground} ${styles.questionPallete}`}>
+            <div className={styles.PalleteTop}>Question Pallete</div>
             <div className='pallete-buttons'>
 
             </div>
           </div>
-          <div className={styles.commonBoxShadow}>
-            <div className="legend-top">Legend (Click to View)</div>
-            <div className="legend-info">
-              <div>Answer</div>
-              <div>No Answer</div>
-              <div>Review Answer</div>
-              <div>Review Answer</div>
-              <div>Dump</div>
-              <div>No Visit</div>
-              <div>All Questions</div>
+          <div className={`${styles.commonBoxShadow} ${styles.lightBlueBackground} ${styles.legendOuter}`}>
+            <div className={styles.legendTop}>Legend (Click to View)</div>
+            <div className={styles.legendInfo}>
+              <div className={styles.legendAnswer}>Answer</div>
+              <div className={styles.legendNoAnswer}>No Answer</div>
+              <div className={styles.legendPlusAnswer}>Review+Ans</div>
+              <div className={styles.legendMinusAnswer}>Review-Ans</div>
+              <div className={styles.legendDump}>Dump</div>
+              <div className={styles.legendNoVisit}>No Visit</div>
             </div>
-            <div className="legend-bottom">
-            <button className={styles.commonButton}>Profile</button>
-            <button className={styles.commonButton}>Instr</button>
-            <button className={styles.commonButton}>Questions</button>
-            <button className={styles.commonButton}>Submit</button>
+              <div className={styles.AllQuestions}>All Questions</div>
+            <div className={styles.legendBottom}>
+            <button className={styles.legendButton}>Profile</button>
+            <button className={styles.legendButton}>Instr</button>
+            <button className={styles.legendButton}>Questions</button>
+            <button className={styles.legendButton}>Submit</button>
             </div>
           </div>
         </div>
