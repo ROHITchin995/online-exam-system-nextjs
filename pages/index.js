@@ -3,10 +3,10 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import { useState } from 'react'
 
-
-
 export default function Home() {
   const [section, setSection] = useState(['All sections', 'PHYSICS', 'CHEMISTRY', 'MATHS'])
+  const [questionButtons, setQuestionButtons] = useState(['CLEAR RESPONSE', 'REVIEW', 'DUMP', 'PREVIOUS', 'NEXT'])
+  const [legendButtons, setLegendButtons] = useState(['Profile', 'Instr', 'Questions', 'Submit'])
   return (
     <>
       <Head>
@@ -16,114 +16,115 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.wrapper}>
-      <nav className={styles.nav}>
-        <span className={styles.navtext}>
-        DEMO ONLINE TEST
-        </span>
-      </nav>
-      <div className={styles.maincontainer}>
-        <div className='question-section'>
-          <div className="sections-button">
-            {
-              section.map((sections)=>(
-                <button className={styles.commonButton}>{sections}</button>
-              ))
-            }
+        <nav className={styles.nav}>
+          <span className={styles.navtext}>
+            DEMO ONLINE TEST
+          </span>
+        </nav>
+        <div className={styles.maincontainer}>
+          <div className='question-section'>
+            <div className="sections-button">
+              {
+                section.map((sections, index) => (
+                  <button key={index} className={styles.commonButton} onClick={() => console.log(index)}>{sections}</button>
+                ))
+              }
+            </div>
+            <div className={styles.questionContainer}>
+              <div className={styles.questionContainerTop}>
+                <span>Q No.:1</span>
+                <span>View in
+                  <select className={styles.selectMenu} name="question-language" id="question-language">
+                    <option className={styles.selectMenu} value="volvo">English</option>
+                    <option className={styles.selectMenu} value="saab">Hindi</option>
+                  </select></span>
+
+              </div>
+              <div className={styles.topLine}>
+                <span>QUESTION INSTRUCTION</span>
+                <span>QUESTION</span>
+              </div>
+
+              <div className={styles.questionMainData}>
+                <div className={styles.questionInstruction}>Here comes all instruction</div>
+                <div className={styles.questionWithOptions}>
+                  <div className={styles.questionDesc}>Here comes question...</div>
+
+                  <div className={styles.inputOuter}>
+                    <input type="radio" id="optionA" name="question-options" />
+                    <label htmlFor="optionA"> (A). </label>
+                  </div>
+
+                  <div className={styles.inputOuter}>
+                    <input type="radio" id="optionB" name="question-options" />
+                    <label htmlFor="optionB"> (B). </label>
+                  </div>
+
+                  <div className={styles.inputOuter}>
+                    <input type="radio" id="optionC" name="question-options" />
+                    <label htmlFor="optionC"> (C). </label>
+                  </div>
+
+                  <div className={styles.inputOuter}>
+                    <input type="radio" id="optionD" name="question-options" />
+                    <label htmlFor="optionD"> (D). </label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div className="questionButtons">
+              {
+                questionButtons.map((questionButton, index) => (
+                  <button key={index} className={styles.commonButton}>{questionButton}</button>
+                ))
+              }
+            </div>
           </div>
-          <div className={styles.questionContainer}>
-            <div className={styles.questionContainerTop}>
-              <span>Q No.:1</span> 
-              <span>View in
-              <select className={styles.selectMenu} name="question-language" id="question-language">
-                <option className={styles.selectMenu} value="volvo">English</option>
-                <option className={styles.selectMenu} value="saab">Hindi</option>
-              </select></span>
-              
+
+          <div className={styles.questionStatus}>
+            <div className={`${styles.commonBoxShadow} ${styles.lightBlueBackground}`}>
+              <div className={styles.imageAndTime}>
+                <div className={styles.candidateImage}>
+                  candidate image here...
+                </div>
+                Time Left: <br />
+                Name
+              </div>
+
             </div>
-            <div className={styles.topLine}>
-              <span>QUESTION INSTRUCTION</span>
-              <span>QUESTION</span>
+            <div className={`${styles.commonBoxShadow} ${styles.lightBlueBackground} ${styles.questionPallete}`}>
+              <div className={styles.PalleteTop}>Question Pallete</div>
+              <div className='pallete-buttons'>
+
+              </div>
             </div>
-            
-            <div className={styles.questionMainData}>
-              <div className={styles.questionInstruction}>Here comes all instruction</div>
-              <div className={styles.questionWithOptions}>
-                <div className={styles.questionDesc}>Here comes question...</div>
-                
-                <div className={styles.inputOuter}>
-                <input type="radio" id="optionA" name="question-options" />
-                <label for="optionA"> (A). </label>
-                </div>
-                  
-                <div className={styles.inputOuter}>
-                <input type="radio" id="optionB" name="question-options" />
-                <label for="optionB"> (B). </label>
-                </div>
-                
-                <div className={styles.inputOuter}>
-                <input type="radio" id="optionC" name="question-options" />
-                <label for="optionC"> (C). </label>
-                </div>
-                
-                <div className={styles.inputOuter}>
-                <input type="radio" id="optionD" name="question-options" />
-                <label for="optionD"> (D). </label>
-                </div>
-                
+            <div className={`${styles.commonBoxShadow} ${styles.lightBlueBackground} ${styles.legendOuter}`}>
+              <div className={styles.legendTop}>Legend (Click to View)</div>
+              <div className={styles.legendInfo}>
+                <div className={styles.legendAnswer}>Answer</div>
+                <div className={styles.legendNoAnswer}>No Answer</div>
+                <div className={styles.legendPlusAnswer}>Review+Ans</div>
+                <div className={styles.legendMinusAnswer}>Review-Ans</div>
+                <div className={styles.legendDump}>Dump</div>
+                <div className={styles.legendNoVisit}>No Visit</div>
+              </div>
+              <div className={styles.AllQuestions}>All Questions</div>
+              <div className={styles.legendBottom}>
+                {
+                  legendButtons.map((lengendButton, index) => (
+                    <button key={index} className={styles.legendButton}>{lengendButton}</button>
+                  ))
+                }
               </div>
             </div>
           </div>
-          <div className="question-buttons">
-          <button className={styles.commonButton}>CLEAR RESPONSE</button>
-            <button className={styles.commonButton}>REVIEW</button>
-            <button className={styles.commonButton}>DUMP</button>
-            <button className={styles.commonButton}>PREVIOUS</button>
-            <button className={styles.commonButton}>NEXT</button>
-          </div>
+
         </div>
 
-        <div className={styles.questionStatus}>
-          <div className={`${styles.commonBoxShadow} ${styles.lightBlueBackground}`}>
-            <div className={styles.imageAndTime}>
-            <div className={styles.candidateImage}>
-              candidate image here... 
-            </div>
-              Time Left: <br />
-              Name
-            </div>
-            
-          </div>
-          <div className={`${styles.commonBoxShadow} ${styles.lightBlueBackground} ${styles.questionPallete}`}>
-            <div className={styles.PalleteTop}>Question Pallete</div>
-            <div className='pallete-buttons'>
-
-            </div>
-          </div>
-          <div className={`${styles.commonBoxShadow} ${styles.lightBlueBackground} ${styles.legendOuter}`}>
-            <div className={styles.legendTop}>Legend (Click to View)</div>
-            <div className={styles.legendInfo}>
-              <div className={styles.legendAnswer}>Answer</div>
-              <div className={styles.legendNoAnswer}>No Answer</div>
-              <div className={styles.legendPlusAnswer}>Review+Ans</div>
-              <div className={styles.legendMinusAnswer}>Review-Ans</div>
-              <div className={styles.legendDump}>Dump</div>
-              <div className={styles.legendNoVisit}>No Visit</div>
-            </div>
-              <div className={styles.AllQuestions}>All Questions</div>
-            <div className={styles.legendBottom}>
-            <button className={styles.legendButton}>Profile</button>
-            <button className={styles.legendButton}>Instr</button>
-            <button className={styles.legendButton}>Questions</button>
-            <button className={styles.legendButton}>Submit</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <footer className={styles.footer}>
+        <footer className={styles.footer}>
           Addmen
-      </footer>
+        </footer>
       </div>
     </>
   )
